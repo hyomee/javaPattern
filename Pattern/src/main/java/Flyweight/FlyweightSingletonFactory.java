@@ -3,7 +3,7 @@ package Flyweight;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FlyweightFactory {
+public class FlyweightSingletonFactory {
 
   private String str ;
 
@@ -13,6 +13,14 @@ public class FlyweightFactory {
 
   public String getStr() {
     return str;
+  }
+
+
+
+  private static final FlyweightSingletonFactory INSTANCE = new FlyweightSingletonFactory();
+  private FlyweightSingletonFactory() { }
+  public static FlyweightSingletonFactory getInstance() {
+     return INSTANCE;
   }
 
   // 공유 pool

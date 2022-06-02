@@ -2,6 +2,7 @@ package Flyweight;
 
 public class Flyweight1 implements Flyweight{
 
+
   private String intrinsicStatus;
 
   public Flyweight1(String intrinsicStatus){
